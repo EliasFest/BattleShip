@@ -3,7 +3,8 @@ import java.util.*;
 public class BattleShip {
     public static int rows = 6;
     public static int collumns = 6;
-    public static int ships;
+    public static int BattleShips;
+    public static int Carrier;
     public static String[][] grid = new String[rows][collumns];
 
 
@@ -35,26 +36,6 @@ public class BattleShip {
         for (int i = 0; i < collumns; i++)
             System.out.print(i + " ");
         System.out.println();
-    }
-
-    //Method to place the ships
-    public static void placeShips() {
-        Scanner input = new Scanner(System.in);
-
-        BattleShip.ships = 4;
-
-        for (int i = 1; i <= BattleShip.ships; ) {
-            System.out.print("Enter X coordinate for your " + i + " ship: ");
-            int x = input.nextInt();
-            System.out.print("Enter Y coordinate for your " + i + " ship: ");
-            int y = input.nextInt();
-
-            if ((x >= 0 && x < rows) && (y >= 0 && y < collumns) && (grid[x][y] == "o ")) {
-                grid[x][y] = "X ";
-                i++;
-            }
-        }
-        printGrid();
     }
 
     //Print the last grid

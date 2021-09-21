@@ -8,7 +8,8 @@ public class main {
         //Create Grid
         BattleShip.createGrid();
         //Place ships
-        BattleShip.placeShips();
+        PlaceBattleShips.placeBattleShips();
+        PlaceCarrier.placeCarrier();
 
     }
 }
