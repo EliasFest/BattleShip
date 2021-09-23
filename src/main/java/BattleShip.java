@@ -19,7 +19,9 @@ public class BattleShip {
         //Middle section
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
-                grid[i][j] = "o ";
+                if(grid[i][j] == null) {
+                    grid[i][j] = "o ";
+                }
                 if (j == 0)
                     System.out.print(i + "| " + grid[i][j]);
                 else if (j == grid[i].length - 1)

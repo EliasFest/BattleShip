@@ -16,44 +16,45 @@ public class PlaceCarrier {
             Scanner input2 = new Scanner(System.in);
             String direction = input2.next();
 
-            switch (direction) {
-                case "o":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o ")) {
-                        BattleShip.grid[x][y] = "X ";
-                        BattleShip.grid[x - 1][y] = "X ";
-                        BattleShip.grid[x - 2][y] = "X ";
-                        i++;
-                    }
-                    break;
-                case "u":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o ")) {
-                        BattleShip.grid[x][y] = "X ";
-                        BattleShip.grid[x + 1][y] = "X ";
-                        BattleShip.grid[x + 2][y] = "X ";
-                        i++;
-                    }
-                    break;
-                case "l":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o ")) {
-                        BattleShip.grid[x][y] = "X ";
-                        BattleShip.grid[x][y - 1] = "X ";
-                        BattleShip.grid[x][y - 2] = "X ";
-                        i++;
-                    }
-                    break;
-                case "r":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o ")) {
-                        BattleShip.grid[x][y] = "X ";
-                        BattleShip.grid[x][y + 1] = "X ";
-                        BattleShip.grid[x][y + 2] = "X ";
-                        i++;
-                    }
-                    break;
-                default:
-                    System.out.println("Falsche eingabe");
-                    break;
+            while (BattleShip.grid[x][y].equals("o ")) {
+                switch (direction) {
+                    case "o":
+                        if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x - 1][y].equals("X ")) && !BattleShip.grid[x - 2][y].equals("X "))) {
+                            BattleShip.grid[x][y] = "X ";
+                            BattleShip.grid[x - 1][y] = "X ";
+                            BattleShip.grid[x - 2][y] = "X ";
+                            i++;
+                        }
+                        break;
+                    case "u":
+                        if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x + 1][y].equals("X ")) && !BattleShip.grid[x + 2][y].equals("X "))) {
+                            BattleShip.grid[x][y] = "X ";
+                            BattleShip.grid[x + 1][y] = "X ";
+                            BattleShip.grid[x + 2][y] = "X ";
+                            i++;
+                        }
+                        break;
+                    case "l":
+                        if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x][y - 1].equals("X ")) && !BattleShip.grid[x][y - 2].equals("X "))) {
+                            BattleShip.grid[x][y] = "X ";
+                            BattleShip.grid[x][y - 1] = "X ";
+                            BattleShip.grid[x][y - 2] = "X ";
+                            i++;
+                        }
+                        break;
+                    case "r":
+                        if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x][y + 1].equals("X ")) && !BattleShip.grid[x][y + 2].equals("X "))) {
+                            BattleShip.grid[x][y] = "X ";
+                            BattleShip.grid[x][y + 1] = "X ";
+                            BattleShip.grid[x][y + 2] = "X ";
+                            i++;
+                        }
+                        break;
+                    default:
+                        System.out.println("Falsche eingabe");
+                        break;
+                }
             }
         }
-        BattleShip.printGrid();
     }
 }
