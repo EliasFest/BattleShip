@@ -32,6 +32,8 @@ public class PlaceBattleShips {
                             BattleShip.grid[x][y] = "X ";
                             BattleShip.grid[x + 1][y] = "X ";
                             i++;
+                        } else {
+                            System.out.println("Dort ist schon ein Schiff.");
                         }
                         break;
                     case "l":
@@ -39,6 +41,8 @@ public class PlaceBattleShips {
                             BattleShip.grid[x][y] = "X ";
                             BattleShip.grid[x][y - 1] = "X ";
                             i++;
+                        } else {
+                            System.out.println("Dort ist schon ein Schiff.");
                         }
                         break;
                     case "r":
@@ -46,6 +50,8 @@ public class PlaceBattleShips {
                             BattleShip.grid[x][y] = "X ";
                             BattleShip.grid[x][y + 1] = "X ";
                             i++;
+                        } else {
+                            System.out.println("Dort ist schon ein Schiff.");
                         }
                         break;
                     default:
