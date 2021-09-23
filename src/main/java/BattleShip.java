@@ -1,17 +1,15 @@
-import java.util.*;
-
 public class BattleShip {
     public static int rows = 6;
-    public static int collumns = 6;
+    public static int columns = 6;
     public static int BattleShips;
     public static int Carrier;
-    public static String[][] grid = new String[rows][collumns];
+    public static String[][] grid = new String[rows][columns];
 
 
     public static void createGrid() {
         //First section
         System.out.print("  ");
-        for (int i = 0; i < collumns; i++)
+        for (int i = 0; i < columns; i++)
             System.out.print(i + " ");
         System.out.println();
         System.out.println("   _ _ _ _ _ _  ");
@@ -35,7 +33,7 @@ public class BattleShip {
         //Last section
         System.out.println("   _ _ _ _ _ _  ");
         System.out.print("  ");
-        for (int i = 0; i < collumns; i++)
+        for (int i = 0; i < columns; i++)
             System.out.print(i + " ");
         System.out.println();
     }

@@ -5,7 +5,6 @@ public class main {
         System.out.println("You have 2x Carrier and 2x Battleship");
         System.out.println("Carrier size: 3");
         System.out.println("Battleship size: 2");
-        //Create Grid
         //Place ships
         PlaceBattleShips.placeBattleShips();
         PlaceCarrier.placeCarrier();

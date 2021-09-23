@@ -19,7 +19,7 @@ public class PlaceCarrier {
 
             switch (direction) {
                 case "o":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x - 1][y].equals("X ") && !BattleShip.grid[x - 2][y].equals("X ")))) {
+                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.columns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x - 1][y].equals("X ") && !BattleShip.grid[x - 2][y].equals("X ")))) {
                         BattleShip.grid[x][y] = "X ";
                         BattleShip.grid[x - 1][y] = "X ";
                         BattleShip.grid[x - 2][y] = "X ";
@@ -29,7 +29,7 @@ public class PlaceCarrier {
                     }
                     break;
                 case "u":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x + 1][y].equals("X ") && !BattleShip.grid[x + 2][y].equals("X ")))) {
+                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.columns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x + 1][y].equals("X ") && !BattleShip.grid[x + 2][y].equals("X ")))) {
                         BattleShip.grid[x][y] = "X ";
                         BattleShip.grid[x + 1][y] = "X ";
                         BattleShip.grid[x + 2][y] = "X ";
@@ -39,7 +39,7 @@ public class PlaceCarrier {
                     }
                     break;
                 case "l":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x][y - 1].equals("X ") && !BattleShip.grid[x][y - 2].equals("X ")))) {
+                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.columns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x][y - 1].equals("X ") && !BattleShip.grid[x][y - 2].equals("X ")))) {
                         BattleShip.grid[x][y] = "X ";
                         BattleShip.grid[x][y - 1] = "X ";
                         BattleShip.grid[x][y - 2] = "X ";
@@ -49,7 +49,7 @@ public class PlaceCarrier {
                     }
                     break;
                 case "r":
-                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.collumns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x][y + 1].equals("X ") && !BattleShip.grid[x][y + 2].equals("X ")))) {
+                    if ((x >= 0 && x < BattleShip.rows) && (y >= 0 && y < BattleShip.columns) && (BattleShip.grid[x][y] == "o " && (!BattleShip.grid[x][y].equals("X ") && !BattleShip.grid[x][y + 1].equals("X ") && !BattleShip.grid[x][y + 2].equals("X ")))) {
                         BattleShip.grid[x][y] = "X ";
                         BattleShip.grid[x][y + 1] = "X ";
                         BattleShip.grid[x][y + 2] = "X ";
